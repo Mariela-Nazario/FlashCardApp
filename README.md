@@ -8,7 +8,7 @@ FlashCard App. When a the question screen is pressed the answer is revealed
 ### App Walk-though
 `TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src=https://imgur.com/a/D7W2WGf width=200><br>
+<iframe src="https://giphy.com/embed/tY7Y9Jav8djlYNpyyJ" width="232" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tY7Y9Jav8djlYNpyyJ">via GIPHY</a></p>
 
 ## Required
 - [X ] Create New Project in Android Studio
