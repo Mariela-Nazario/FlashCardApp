@@ -73,5 +73,17 @@
         android:layout_marginTop="40dp"
         android:layout_below="@id/flashcard_answer"
         android:src="@drawable/ic_iconmonstr_eye_8" />
+    <TextView
+        android:id="@+id/flashcard_answer2"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="21dp"
+        android:background="#CEDC0C8F"
+        android:gravity="center"
+        android:text="Barack Obama"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
 
 </RelativeLayout>

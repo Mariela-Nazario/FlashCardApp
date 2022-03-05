@@ -70,6 +70,44 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.flashcard_answer2).setVisibility(View.VISIBLE);
+                findViewById(R.id.flashcard_question).setVisibility(View.INVISIBLE);
+                findViewById(R.id.answer2).setVisibility(View.INVISIBLE);
+                findViewById(R.id.answer1).setVisibility(View.INVISIBLE);
+                findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
+                if(isShowingAnswers =  true){
+                    ((ImageView) findViewById(R.id.eye_visibility)).setVisibility(View.INVISIBLE);
+                }
+                else{
+                    ((ImageView) findViewById(R.id.eye_notSeen)).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.answer2).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.answer1).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        findViewById(R.id.flashcard_answer2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.flashcard_answer2).setVisibility(View.INVISIBLE);
+                findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
+                if(isShowingAnswers = true) {
+                    findViewById(R.id.answer2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.answer1).setVisibility(View.VISIBLE);
+                    findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
+                    ((ImageView) findViewById(R.id.eye_visibility)).setVisibility(View.VISIBLE);
+                    ((ImageView) findViewById(R.id.eye_notSeen)).setVisibility(View.INVISIBLE);
+                }else{
+                    ((ImageView) findViewById(R.id.eye_notSeen)).setVisibility(View.VISIBLE);
+                    ((ImageView) findViewById(R.id.eye_visibility)).setVisibility(View.INVISIBLE);
+
+
+                }
+            }
+        });
 
     }
 }
