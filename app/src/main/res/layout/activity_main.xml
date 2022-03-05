@@ -10,19 +10,68 @@
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+
+        android:background="@drawable/card_background"
         android:gravity="center"
         android:text="Who is the 44th president of the United States of America?"
-        android:textSize="40sp" />
+        android:textColor="#0C0C0C"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/flashcard_answer"
-        android:layout_below="@id/flashcard_question"
-        android:visibility="invisible"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/answer2"
+        android:layout_marginTop="21dp"
+        android:background="#CEDC0C8F"
         android:gravity="center"
         android:text="Barack Obama"
+        android:textColor="#ffffff"
         android:textSize="40sp" />
 
+    <TextView
+        android:id="@+id/answer1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/flashcard_question"
+        android:layout_marginTop="79dp"
+        android:background="#CEDC0C8F"
+        android:gravity="center"
+        android:text="Bill Clinton"
+        android:textColor="#ffffff"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/answer1"
+        android:layout_marginTop="21dp"
+        android:background="#CEDC0C8F"
+        android:gravity="center"
+        android:text="George Bush"
+        android:textColor="#ffffff"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/eye_visibility"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/flashcard_answer"
+        android:src="@drawable/ic_iconmonstr_eye_5" />
+
+    <ImageView
+        android:id="@+id/eye_notSeen"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/flashcard_answer"
+        android:src="@drawable/ic_iconmonstr_eye_8" />
 
 </RelativeLayout>
