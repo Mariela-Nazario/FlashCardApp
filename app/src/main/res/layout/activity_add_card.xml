@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCardActivity">
+
+
+    <ImageView
+        android:id="@+id/cancel_sign"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/ic_iconmonstr_x_mark_7" />
+
+    <EditText
+        android:id="@+id/QuestionTextField"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:hint="Enter A Question"/>
+    <EditText
+        android:id="@+id/AnswerTextField"
+        android:layout_width="match_parent"
+        android:layout_below="@id/QuestionTextField"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:hint="Add An Answer"/>
+
+
+
+</RelativeLayout>
