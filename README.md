@@ -8,6 +8,9 @@ FlashCard App. When a the question screen is pressed the answer is revealed
 ### App Walk-though
 <img src=https://media.giphy.com/media/tY7Y9Jav8djlYNpyyJ/giphy.gif width=200><br>
 
+
+<img src=https://media.giphy.com/media/vK2vkzhTL3wm8JBsyq/giphy.gif  width=200><br>
+
 ## Required
 - [X ] Create New Project in Android Studio
 - [X ] Add a view for the front side of the flashcard to display the question
