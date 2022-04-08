@@ -10,10 +10,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     boolean isShowingAnswers = true;
     TextView question;
     TextView answer;
+    FlashcardDatabase flashcardDatabase;
+    int currentCardDisplayedIndex = 0;
+    List<Flashcard> allFlashcards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         question = findViewById(R.id.flashcard_question);
         answer = findViewById(R.id.flashcard_answer2);
+        flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView) findViewById(R.id.flashcard_answer2)).setText(allFlashcards.get(0).getAnswer());
+        }
+
         findViewById(R.id.flashcard_answer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,6 +133,30 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
+        findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // don't try to go to next card if you have no cards to begin with
+                if (allFlashcards.size() == 0)
+                    return;
+                // advance our pointer index so we can show the next card
+                currentCardDisplayedIndex++;
+
+                // make sure we don't get an IndexOutOfBoundsError if we are viewing the last indexed card in our list
+                if(currentCardDisplayedIndex >= allFlashcards.size()) {
+
+                    currentCardDisplayedIndex = 0;
+                }
+
+                // set the question and answer TextViews with data from the database
+                allFlashcards = flashcardDatabase.getAllCards();
+                Flashcard flashcard = allFlashcards.get(currentCardDisplayedIndex);
+
+                ((TextView) findViewById(R.id.flashcard_answer2)).setText(flashcard.getAnswer());
+                ((TextView) findViewById(R.id.flashcard_question)).setText(flashcard.getQuestion());
+            }
+        });
+
 
     }
     @Override
@@ -132,7 +169,8 @@ public class MainActivity extends AppCompatActivity {
                question.setText(string1);
                answer.setText(string2);
 
-
+               flashcardDatabase.insertCard(new Flashcard(string1, string2));
+               allFlashcards = flashcardDatabase.getAllCards();
            }
         }
 
