@@ -10,7 +10,8 @@
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/card_background"
         android:gravity="center"
         android:text="Who is the 44th president of the United States of America?"
@@ -23,6 +24,8 @@
         android:layout_height="100dp"
         android:layout_below="@id/answer2"
         android:layout_marginTop="21dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:background="#CEDC0C8F"
         android:gravity="center"
         android:text="Barack Obama"
@@ -35,6 +38,8 @@
         android:layout_height="100dp"
         android:layout_below="@id/flashcard_question"
         android:layout_marginTop="79dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:background="#CEDC0C8F"
         android:gravity="center"
         android:text="Bill Clinton"
@@ -47,6 +52,8 @@
         android:layout_height="100dp"
         android:layout_below="@id/answer1"
         android:layout_marginTop="21dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:background="#CEDC0C8F"
         android:gravity="center"
         android:text="George Bush"
@@ -56,10 +63,12 @@
 
     <ImageView
         android:id="@+id/eye_visibility"
-        android:layout_width="40dp"
-        android:layout_height="42dp"
+        android:layout_width="50dp"
+        android:layout_height="52dp"
         android:layout_below="@id/flashcard_answer"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="30dp"
+
+        android:layout_centerHorizontal="true"
 
         android:src="@drawable/ic_iconmonstr_eye_5"
 
@@ -68,10 +77,11 @@
 
     <ImageView
         android:id="@+id/next"
-        android:layout_width="40dp"
-        android:layout_height="42dp"
-        android:layout_below="@id/eye_visibility"
-        android:layout_marginTop="10dp"
+        android:layout_width="50dp"
+        android:layout_height="52dp"
+        android:layout_toLeftOf="@+id/eye_visibility"
+        android:layout_marginTop="650dp"
+        android:layout_marginRight="100dp"
 
         android:src="@drawable/ic_iconmonstr_arrow_28"
 
@@ -79,11 +89,11 @@
 
     <ImageView
         android:id="@+id/plus_sign"
-        android:layout_width="40dp"
-        android:layout_height="42dp"
+        android:layout_width="50dp"
+        android:layout_height="52dp"
         android:layout_below="@id/flashcard_answer"
-        android:layout_marginLeft="313dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
         android:layout_toRightOf="@+id/eye_visibility"
         android:src="@drawable/ic_iconmonstr_plus_6" />
 
@@ -94,20 +104,31 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:visibility="invisible"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="17dp"
         android:layout_below="@id/flashcard_answer"
-        android:src="@drawable/ic_iconmonstr_eye_8" />
+        android:src="@drawable/ic_iconmonstr_eye_8"
+
+
+
+
+        />
+
     <TextView
         android:id="@+id/flashcard_answer2"
-        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:background="#CEDC0C8F"
         android:gravity="center"
         android:text="Barack Obama"
         android:textColor="#ffffff"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>
